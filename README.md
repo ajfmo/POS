@@ -3,129 +3,126 @@
 
 # POSNubeClick
 
-## Propósito del sistema.
+## Purpose of the system.
 
-Se trata de un sistema de ventas genérico que puede ser adaptable a cualquier tipo de negocio donde las ventas sean al mostrador, que manejara:
+It is a generic sales system that can be adapted to any type of business where sales are at the counter, which will handle:
 
+1. Roles
+2. Users
+3. Suppliers.
+4. Deposits.
+5. Inventory.
+6. Shopping.
+7. Sellers.
+8. Customers.
+9. Sales.
+10. Movements (Charges-Discharges inventory, CxC sales, CxP purchases, Expenses).
+11. Configuration (directory of data and formats, connection properties, creation of users, vendors, repositories).
+12. Reports (inventory, purchase, sales, sellers, cats, salaries or payments).
 
-1.  Roles
-2. Usuarios.
-3. Proveedores.
-4. Depósitos.
-5. Inventario.
-6. Compras.
-7. Vendedores.
-8. Clientes.
-9. Ventas.
-10. Movimientos (inventario Cargos-Descargos traslado, ventas CxC, compras CxP, Gastos).
-11. Configuración (directorio de datos y formatos, propiedades de conexión, creación de usuarios, vendedores, depósitos).
-12. Reportes (inventario, compra, ventas, vendedores, gatos, sueldos o pagos).
+Pending to be analyzed: Taxes, CxC, CxP.
 
-Pendiente por analizar: Impuestos, CxC, CxP.\
+2. System functions.
 
- 
-2. Funciones del sistema.
+CRUD operations will be performed on all modules of the system.
 
-En todos los módulos del sistema se realizaran operaciones CRUD.
+2.1. Roles
 
-2.1. Roles.
+From the configuration menu, it will allow creating and assigning the level of the role, which will enable access to the system according to the level of the users.
 
-Desde el menú de configuración, permitirá crear y asignar el nivel del rol, el cual habilitara los accesos al sistema según el nivel a los usuarios.
+2.2 Users
 
-2.2 Usuarios.
+It will be accessible from the configuration menu. When creating or modifying users, the access levels to the different system features (role) must be parameterized.
 
-Sera accesible desde el menú de configuración. Al crear o modificar usuarios se debe parametrizar los niveles acceso a las distintas prestaciones del sistema (rol).
+2.3 Suppliers.
 
-2.3 Proveedores.
+It will be accessible from the main menu, in it you can specify the agreements with the providers, such as credit days and credit limit.
 
-Sera accesible desde el menú principal, en él se podrá especificar los convenios con los proveedores, tales como días de crédito y límite de crédito.
+2.4 Depots.
 
-2.4 Depósitos.
+Available through the configuration menu, it will be used to specify how many deposits are available.
 
-Disponible a través del menú de configuración, servirá para especificar cuantos depósitos se dispone.
+2.5 Inventory.
 
-2.5 Inventario.
+Available in the main menu, when creating the inventory products you must specify in which deposit they will be stored.
 
-Disponible en el menú principal, al crear los productos de inventario se debe especificar en qué deposito se almacenaran.
+** Only allow to modify and eliminate movements to the user that complies with the permissions
 
-**Solo permitira modificar y eliminar movimientos al usuario que cumpla con los permisos
+necessary.
 
-necesarios.
+2.6 Shopping.
 
-2.6 Compras.
+Accessible from the main menu, process merchandise purchases.
 
-Accesible desde el menú principal, procesara las compras de mercancía.
+2.7 Sellers
 
-2.7 Vendedores.
+Available from configuration menu, allows the creation of sellers, you can specify the salaries and commissions of the sellers.
 
-Disponible desde menú de configuración, permite la creación de vendedores, se puede especificar los sueldos y comisiones de los vendedores.
+2.8 Customers.
 
-2.8 Clientes.
+Available from the main menu, in it you can specify the agreements with customers, such as credit days and credit limit.
 
-Disponible desde el menú principal, en él se podrá especificar los convenios con los clientes, tales como días de crédito y límite de crédito.
+2.9 Sales.
 
-2.9 Ventas.
+Available from the main menu, make the sale of products, specifying the seller, the customer, the deposit with which to work and specify the products to add.
 
-Disponible desde el menú principal, realiza la venta de productos, especificando el vendedor, el cliente, el depósito con el que se trabajara y especificar los productos a agregar.
+2.10 Movements.
 
-2.10 Movimientos.
+Accessible from the main menu, in this module several options will be handled:
 
-Accesible desde el menú principal, en este módulo se manejaran varias opciones:
+to. Inventory Movements:
 
-a. Movimientos Inventario:
+Charges-Discharges transfer between deposits.
 
-Cargos-Descargos traslado entre depósitos.
+b. Sales:
 
-b. Ventas:
+Sales cuts (closing of working day, cash cut).
 
-Cortes de ventas (Cierre de jornada, corte de caja).
+Accounts receivable.
 
-Cuentas por cobrar.
+Reprinting of movements.
 
-Reimpresión de movimientos.
+c. Purchases:
 
-c. Compras:
-
-Cuentas por pagar.
+Debts to pay.
 
 
-Reimpresión de movimientos.
+Reprinting of movements.
 
-d. Gastos:
+d. Expenses:
 
-Pagos por gastos (compra insumos internos, pago servicios).
+Payments for expenses (purchase internal supplies, payment for services).
 
-Pagos de sueldos y comisiones.
+Payments of salaries and commissions.
 
-2.11 Configuración.
+2.11 Configuration.
 
-Accesible desde la barra de herramientas en la pantalla principal para los usuarios que cumplan con los permisos necesarios, desde aquí se configuraran y crearan los parámetros básicos para el funcionamiento del sistema. Estos parámetros son:
+Accessible from the toolbar on the main screen for users who comply with the necessary permissions, from here they will configure and create the basic parameters for the operation of the system. These parameters are:
 
-a. Propiedades de conexión.
+to. Connection properties.
 
-b. Directorio de datos y formatos.
+b. Directory of data and formats.
 
-c. Creación de usuarios.
+c. Creation of users.
 
-d. Vendedores.
+d. Vendors
 
-e. Depósitos.
+and. Deposits.
 
-**Solo permitira modificar y eliminar movimientos al usuario que cumpla con los permisos
+** Only allow to modify and eliminate movements to the user that complies with the permissions
 
-necesarios.
+necessary.
 
-2.12 Reportes.
+2.12 Reports.
 
-Accesible desde el menú principal, para los usuarios que cumplan con los permisos necesarios, estará disponible reportes de:
+Accessible from the main menu, for users who comply with the necessary permits, reports of:
 
-a. Ventas: cortes de caja.
+to. Sales: cash cuts.
 
-b. Compra.
+b. Purchase.
 
-c. Inventario.
+c. Inventory.
 
-d. Vendedores.
+d. Vendors
 
-e. Gastos y sueldos.
-
+e. Expenses and Salaries
