@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="setupPane" prefHeight="700.0" prefWidth="850.0"
+	stylesheets="@../styles/styles.css" AnchorPane.rightAnchor="0.0"
+	AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.111"
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nubeclick.pos.view.SetupView">
+	<children>
+		<JFXTabPane fx:id="setupTab" layoutX="0" layoutY="0"
+			prefHeight="700.0" prefWidth="850.0" AnchorPane.rightAnchor="0.0">
+			<tabs>
+				<Tab fx:id="tabParameters" text="Parametros Generales">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0">
+							<children>
+								<Label layoutX="25.0" layoutY="20.0" text="Informacion Basica"
+									underline="true" />
+								<Label layoutX="425.0" layoutY="20.0" text="Parametros de Conexion"
+									underline="true" />
+								<Label layoutX="25.0" layoutY="220.0" text="Ruta de ejecutable"
+									underline="true" />
+								<Label layoutX="425.0" layoutY="220.0" text="Ruta de Reportes"
+									underline="true" />
+								<GridPane layoutX="25.0" layoutY="50.0" prefHeight="145.0"
+									prefWidth="350.0" vgap="15.0">
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES"
+											minWidth="10.0" prefWidth="300.0" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<JFXTextField labelFloat="true" promptText="Identificador fiscal" />
+										<JFXTextField labelFloat="true" promptText="Nombre de la Empresa"
+											GridPane.rowIndex="1" />
+										<JFXTextField labelFloat="true" promptText="Direccion"
+											GridPane.rowIndex="2" />
+										<JFXTextField labelFloat="true" promptText="Telefono"
+											GridPane.rowIndex="3" />
+									</children>
+								</GridPane>
+								<GridPane layoutX="425.0" layoutY="50.0" prefWidth="350.0"
+									vgap="15.0">
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES"
+											minWidth="10.0" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<JFXTextField labelFloat="true" />
+										<JFXTextField labelFloat="true" prefWidth="400.0"
+											promptText="Nombre de Base de Datos" GridPane.rowIndex="1" />
+										<JFXTextField labelFloat="true" prefWidth="400.0"
+											promptText="Usuario" GridPane.rowIndex="2" />
+										<JFXTextField labelFloat="true" prefWidth="400.0"
+											promptText="Direccion de Servidor" />
+										<JFXPasswordField labelFloat="true"
+											promptText="Password" GridPane.rowIndex="3" />
+									</children>
+								</GridPane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab fx:id="tabRoles" text="Roles">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0">
+							<children>
+								<GridPane layoutX="50.0" layoutY="50.0" vgap="15.0">
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES"
+											minWidth="10.0" prefWidth="300.0" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints minHeight="10.0" prefHeight="30.0"
+											vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0"
+											vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<Label text="Registrar nuevo rol." underline="true" />
+										<JFXTextField fx:id="txtRoleId" disable="true"
+											labelFloat="true" promptText="ID" GridPane.rowIndex="1" />
+										<JFXTextField fx:id="txtRoleDescription"
+											labelFloat="true" promptText="Descripcion" GridPane.rowIndex="2" />
+										<JFXTextField fx:id="txtRoleLevel" labelFloat="true"
+											promptText="Nivel" GridPane.rowIndex="3" />
+									</children>
+								</GridPane>
+								<GridPane layoutX="450.0" layoutY="50.0" vgap="5.0">
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES"
+											minWidth="10.0" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<JFXTreeTableView fx:id="roleTableList"
+											prefHeight="400.0" prefWidth="200.0" GridPane.rowIndex="1">
+											<columns>
+												<TreeTableColumn fx:id="colRoleID"
+													prefWidth="50.0" text="ID" />
+												<TreeTableColumn fx:id="colRoleDescription"
+													prefWidth="100.0" text="Descripcion" />
+												<TreeTableColumn fx:id="colRoleLevel"
+													prefWidth="50.0" text="Nivel" />
+											</columns>
+										</JFXTreeTableView>
+										<Label text="Niveles Disponibles" underline="true" />
+									</children>
+								</GridPane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab fx:id="tabUser" text="Usuarios">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0">
+							<children>
+								<GridPane layoutX="450.0" layoutY="50.0" vgap="5.0">
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES"
+											minWidth="10.0" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<Label text="Usuarios disponibles" underline="true" />
+										<JFXTreeTableView fx:id="userTableList"
+											prefHeight="400.0" prefWidth="350.0" GridPane.rowIndex="1">
+											<columns>
+												<TreeTableColumn fx:id="colUserID"
+													prefWidth="50.0" text="ID" />
+												<TreeTableColumn fx:id="colUserName"
+													prefWidth="109.0" text="Descripcion" />
+												<TreeTableColumn fx:id="colUserLogin"
+													prefWidth="100.0" text="Login" />
+												<TreeTableColumn fx:id="colUserRole"
+													prefWidth="100.0" text="Rol" />
+											</columns>
+										</JFXTreeTableView>
+									</children>
+								</GridPane>
+								<GridPane layoutX="50.0" layoutY="50.0" vgap="15.0">
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES"
+											minWidth="10.0" prefWidth="300.0" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints minHeight="10.0" prefHeight="30.0"
+											vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0"
+											vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0"
+											vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0"
+											vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<Label text="Registrar nuevo usuario." underline="true" />
+										<JFXTextField fx:id="txtUserID" labelFloat="true"
+											promptText="ID" GridPane.rowIndex="1" />
+										<JFXTextField fx:id="txtUserName" labelFloat="true"
+											promptText="Descripcion" GridPane.rowIndex="2" />
+										<JFXComboBox fx:id="cboUserRol" labelFloat="true"
+											prefHeight="25.0" prefWidth="135.0" promptText="Rol"
+											GridPane.rowIndex="5" />
+										<JFXTextField fx:id="txtUserLogin" labelFloat="true"
+											promptText="Login" GridPane.rowIndex="3" />
+										<JFXPasswordField fx:id="txtUserPassword"
+											labelFloat="true" promptText="Password" GridPane.rowIndex="4" />
+									</children>
+								</GridPane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab fx:id="tabEmployees" text="Empleados">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0">
+							<children>
+								<GridPane layoutX="450.0" layoutY="50.0" vgap="5.0">
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES"
+											minWidth="10.0" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<Label text="Empleados disponibles" underline="true" />
+										<JFXTreeTableView fx:id="employeeTableList"
+											prefHeight="400.0" prefWidth="350.0" GridPane.rowIndex="1">
+											<columns>
+												<TreeTableColumn fx:id="colEmployeeID"
+													prefWidth="50.0" text="ID" />
+												<TreeTableColumn fx:id="colEmployeeName"
+													prefWidth="109.0" text="Descripcion" />
+												<TreeTableColumn fx:id="colEmployeeAddress"
+													prefWidth="100.0" text="Direccion" />
+												<TreeTableColumn fx:id="colEmployeePhone"
+													prefWidth="100.0" text="Telefono" />
+											</columns>
+										</JFXTreeTableView>
+									</children>
+								</GridPane>
+								<GridPane layoutX="50.0" layoutY="50.0" vgap="15.0">
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES"
+											minWidth="10.0" prefWidth="300.0" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints minHeight="10.0" prefHeight="30.0"
+											vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0"
+											vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0"
+											vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<Label text="Registrar nuevo empleado." underline="true" />
+										<JFXTextField fx:id="txtEmployeeID" labelFloat="true"
+											promptText="ID" GridPane.rowIndex="1" />
+										<JFXTextField fx:id="txtEmployeeName" labelFloat="true"
+											promptText="Descripcion" GridPane.rowIndex="2" />
+										<JFXTextField fx:id="txtEmployeeAddress"
+											labelFloat="true" promptText="Direccion" GridPane.rowIndex="3" />
+										<JFXPasswordField fx:id="txtEmployeePhone"
+											labelFloat="true" promptText="Telefono" GridPane.rowIndex="4" />
+									</children>
+								</GridPane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab fx:id="tabAbout" text="Acerca de">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0">
+							<children>
+								<Label layoutX="133.0" layoutY="85.0" text="Informacion de software" />
+								<Label layoutX="133.0" layoutY="128.0" text="Informacion de cliente" />
+								<Label layoutX="133.0" layoutY="170.0" text="Informacion de Soporte" />
+								<Label layoutX="133.0" layoutY="207.0" text="Informacion de Licencia" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+			</tabs>
+		</JFXTabPane>
+		<HBox layoutX="600.0" layoutY="625.0" spacing="20.0">
+			<children>
+				<JFXButton id="crud-save" fx:id="btnSave" buttonType="RAISED"
+					onAction="#save" text="Guardar" />
+				<JFXButton id="crud-update" fx:id="btnUpdate" buttonType="RAISED"
+					onAction="#update" text="Modificar" />
+				<JFXButton id="crud-cancel" fx:id="btnCancel" buttonType="RAISED"
+					onAction="#cancel" text="Cancelar" />
+			</children>
+		</HBox>
+	</children>
+</AnchorPane>

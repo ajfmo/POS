@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0"
+	prefWidth="850.0" stylesheets="@../styles/styles.css"
+	AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+	xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.nubeclick.pos.view.TransactionView">
+	<children>
+		<JFXButton id="tx-inventory" fx:id="btnInventory"
+			buttonType="RAISED" layoutX="50.0" layoutY="130.0" onAction="#inventoryTx"
+			prefHeight="150.0" prefWidth="150.0" text="Inventario" />
+		<JFXButton id="tx-sales" fx:id="btnSales" buttonType="RAISED"
+			layoutX="250.0" layoutY="130.0" prefHeight="150.0" prefWidth="150.0"
+			text="Ventas" />
+		<JFXButton id="tx-purchases" fx:id="btnPurchases"
+			buttonType="RAISED" layoutX="450.0" layoutY="130.0" prefHeight="150.0"
+			prefWidth="150.0" text="Compras" />
+		<JFXButton id="tx-prints" fx:id="btnPrints" buttonType="RAISED"
+			layoutX="650.0" layoutY="130.0" onAction="#printsTx" prefHeight="150.0"
+			prefWidth="150.0" text="Reimpresiones" />
+		<Label layoutX="25.0" layoutY="15.0" styleClass="frame-titles"
+			text="Movimientos" />
+	</children>
+</AnchorPane>

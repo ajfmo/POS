@@ -1,0 +1,28 @@
+/* ListView */
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: #426cad;
+    -fx-text-fill: white;
+}
+
+.list-cell { /* <=== changed to even */
+    -fx-background-color:  #426cad;
+    
+    -fx-text-fill: white;
+    -fx-cell-size: 3.4em; /* 24 */
+    -fx-font: 18.0px "Roboto";
+    -fx-font-style: oblique;
+    -fx-alignment: CENTER_LEFT;
+    -fx-border-color:transparent;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #13418b;
+    -fx-text-fill: white;
+}
+
+.list-view{
+    -fx-background-color: #426cad;
+    -fx-border-insets: 0.0;
+    -fx-background-insets: 0.0;
+}

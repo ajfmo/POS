@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0"
+	prefWidth="850.0" stylesheets="@../styles/styles.css"
+	AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+	xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.nubeclick.pos.view.PurchaseView">
+	<children>
+		<Pane layoutX="500.0" prefHeight="120.0" prefWidth="350.0"
+			styleClass="pane-factura" stylesheets="@../styles/styles.css">
+			<children>
+				<Label layoutX="15.0" layoutY="15.0" styleClass="pane-factura"
+					text="Factura:" textFill="WHITE">
+					<font>
+						<Font name="System Bold" size="18.0" />
+					</font>
+				</Label>
+				<Label fx:id="lblPurchaseTicket" layoutX="229.0" layoutY="11.0"
+					text="0000-999" textFill="#2cae64">
+					<font>
+						<Font name="System Bold" size="24.0" />
+					</font>
+				</Label>
+				<Label layoutX="14.0" layoutY="45.0" text="Fecha:" textFill="WHITE">
+					<font>
+						<Font name="System Bold" size="18.0" />
+					</font>
+				</Label>
+				<Label fx:id="lblPurchaseDate" layoutX="204.0" layoutY="40.0"
+					text="15/03/2018" textFill="#2cae64">
+					<font>
+						<Font name="System Bold" size="24.0" />
+					</font>
+				</Label>
+				<Label layoutX="14.0" layoutY="75.0" text="Total compra:"
+					textFill="WHITE">
+					<font>
+						<Font name="System Bold" size="18.0" />
+					</font>
+				</Label>
+				<Label fx:id="lblPurchaseTotal" alignment="CENTER_RIGHT"
+					layoutX="132.0" layoutY="71.0" prefHeight="35.0" prefWidth="204.0"
+					text="999.999.999,99 $" textFill="#2cae64">
+					<font>
+						<Font name="System Bold" size="24.0" />
+					</font>
+				</Label>
+			</children>
+		</Pane>
+		<HBox layoutX="25.0" layoutY="50.0" spacing="20.0">
+			<children>
+				<VBox spacing="20.0">
+					<children>
+						<JFXComboBox fx:id="cboEmployeeID" focusColor="#1976d2"
+							labelFloat="true" promptText="Employee" />
+						<JFXComboBox fx:id="cboDepositID" focusColor="#1976d2"
+							labelFloat="true" prefHeight="25.0" prefWidth="94.0" promptText="Deposito" />
+					</children>
+				</VBox>
+				<VBox prefHeight="70.0" prefWidth="352.0" spacing="20.0">
+					<children>
+						<HBox>
+							<children>
+								<JFXTextField fx:id="txtSupplierCode" labelFloat="true"
+									promptText="Codigo Proveedor" />
+								<JFXButton fx:id="btnAddSupplier" text="Crear Proveedor" />
+							</children>
+						</HBox>
+						<JFXTextField fx:id="txtSupplierDescription"
+							promptText="Descripcion del Proveedor" />
+					</children>
+				</VBox>
+			</children>
+		</HBox>
+		<AnchorPane AnchorPane.bottomAnchor="25.0"
+			AnchorPane.rightAnchor="25.0">
+			<children>
+				<HBox spacing="20.0">
+					<children>
+						<JFXButton id="crud-save" fx:id="btnTotal" buttonType="RAISED"
+							text="Totalizar" textFill="WHITE" />
+						<JFXButton id="crud-update" fx:id="btnPrint" buttonType="RAISED"
+							text="Reimprimir" textFill="#000000a6" />
+						<JFXButton id="crud-cancel" fx:id="btnCancel"
+							buttonType="RAISED" text="Cancelar" textFill="WHITE" />
+					</children>
+				</HBox>
+			</children>
+		</AnchorPane>
+		<JFXTreeTableView fx:id="tblPurchasesProduct"
+			layoutX="352.0" layoutY="131.0" prefHeight="500.0" prefWidth="800.0"
+			AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+			<columns>
+				<TreeTableColumn fx:id="colProductCode" prefWidth="75.0"
+					text="Codigo" />
+				<TreeTableColumn fx:id="colProductDescr" prefWidth="475.0"
+					text="Descripcion" />
+				<TreeTableColumn fx:id="colProductPrice" prefWidth="100.0"
+					text="Precio unitario" />
+				<TreeTableColumn fx:id="colProductQty" prefWidth="75.0"
+					text="Cantidad" />
+				<TreeTableColumn fx:id="colProductTotalPrice"
+					prefWidth="75.0" text="Precio Total" />
+			</columns>
+		</JFXTreeTableView>
+		<JFXButton fx:id="btnAddProduct" layoutX="25.0" layoutY="650.0"
+			text="Agregar Producto" />
+		<Label layoutX="25.0" layoutY="15.0" styleClass="frame-titles"
+			text="Compras" />
+	</children>
+</AnchorPane>

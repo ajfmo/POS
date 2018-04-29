@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">nubeclick</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/posnubeclick?useSSL=false</property>
+        <property name="hibernate.connection.username">nubeclick</property>
+        <property name="hibernate.default_catalog">posnubeclick</property>
+        <property name="hibernate.default_schema">posnubeclick</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">true</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <mapping class="com.nubeclick.pos.dto.Purchase" />
+        <mapping class="com.nubeclick.pos.dto.Saledetail" />
+        <mapping class="com.nubeclick.pos.dto.Warehouse" />
+        <mapping class="com.nubeclick.pos.dto.Cashier" />
+        <mapping class="com.nubeclick.pos.dto.SaledetailId" />
+        <mapping class="com.nubeclick.pos.dto.Product" />
+        <mapping class="com.nubeclick.pos.dto.Employee" />
+        <mapping class="com.nubeclick.pos.dto.User" />
+        <mapping class="com.nubeclick.pos.dto.Closingsales" />
+        <mapping class="com.nubeclick.pos.dto.Deliveryaddress" />
+        <mapping class="com.nubeclick.pos.dto.Purchasedetail" />
+        <mapping class="com.nubeclick.pos.dto.PurchasedetailId" />
+        <mapping class="com.nubeclick.pos.dto.Supplier" />
+        <mapping class="com.nubeclick.pos.dto.Period" />
+        <mapping class="com.nubeclick.pos.dto.Role" />
+        <mapping class="com.nubeclick.pos.dto.Customer" />
+        <mapping class="com.nubeclick.pos.dto.Deliveryorder" />
+        <mapping class="com.nubeclick.pos.dto.Sale" />
+    </session-factory>
+</hibernate-configuration>

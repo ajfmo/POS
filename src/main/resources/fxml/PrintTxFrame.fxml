@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0"
+	prefWidth="850.0" stylesheets="@../styles/styles.css"
+	AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+	xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.nubeclick.pos.view.PrintTxView">
+	<children>
+		<JFXTabPane prefHeight="700.0" prefWidth="850.0"
+			AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<tabs>
+				<Tab text="Compras">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0">
+							<children>
+								<Pane layoutX="25.0" layoutY="25.0" prefHeight="220.0"
+									prefWidth="200.0" styleClass="pane-print-filters">
+									<children>
+										<VBox layoutX="10.0" layoutY="5.0" spacing="7.0">
+											<children>
+												<Label text="Tipo de Reporte">
+													<font>
+														<Font size="14.0" />
+													</font>
+												</Label>
+												<RadioButton mnemonicParsing="false"
+													text="Facturas por Compras" />
+												<RadioButton mnemonicParsing="false"
+													text="Resumen de Compras" />
+												<RadioButton mnemonicParsing="false"
+													text="Compras por Proveedor" />
+												<RadioButton mnemonicParsing="false"
+													text="Compras por Producto" />
+												<Label text="Rango de Fechas">
+													<font>
+														<Font size="14.0" />
+													</font>
+												</Label>
+												<DatePicker promptText="Desde" />
+												<DatePicker promptText="Hasta" />
+											</children>
+										</VBox>
+									</children>
+								</Pane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="Ventas">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0" />
+					</content>
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0">
+							<children>
+								<Pane layoutX="25.0" layoutY="25.0" prefHeight="220.0"
+									prefWidth="200.0" styleClass="pane-print-filters">
+									<children>
+										<VBox layoutX="10.0" layoutY="5.0" spacing="7.0">
+											<children>
+												<Label text="Tipo de Reporte">
+													<font>
+														<Font size="14.0" />
+													</font>
+												</Label>
+												<RadioButton mnemonicParsing="false"
+													text="Facturas de Ventas" />
+												<RadioButton mnemonicParsing="false" text="Resumen de Ventas" />
+												<RadioButton mnemonicParsing="false"
+													text="Ventas por Vendedor" />
+												<RadioButton mnemonicParsing="false"
+													text="Ventas por Producto" />
+												<Label text="Rango de Fechas">
+													<font>
+														<Font size="14.0" />
+													</font>
+												</Label>
+												<DatePicker promptText="Desde" />
+												<DatePicker promptText="Hasta" />
+											</children>
+										</VBox>
+									</children>
+								</Pane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="Vendedores">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0" />
+					</content>
+				</Tab>
+				<Tab text="Empleados">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0" />
+					</content>
+				</Tab>
+				<Tab text="Administrativo">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0" />
+					</content>
+				</Tab>
+			</tabs>
+		</JFXTabPane>
+		<AnchorPane AnchorPane.bottomAnchor="25.0"
+			AnchorPane.rightAnchor="25.0">
+			<children>
+				<HBox spacing="20.0">
+					<children>
+						<JFXButton id="crud-save" fx:id="btnSave" buttonType="RAISED"
+							text="Guardar" textFill="WHITE" />
+						<JFXButton id="crud-update" fx:id="btnUpdate"
+							buttonType="RAISED" text="Modificar" textFill="#000000a6" />
+						<JFXButton id="crud-cancel" fx:id="btnCancel"
+							buttonType="RAISED" text="Cancelar" textFill="WHITE" />
+					</children>
+				</HBox>
+			</children>
+		</AnchorPane>
+	</children>
+</AnchorPane>

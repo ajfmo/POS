@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="mysql5-162f256a845-6960f2c74cea533a" provider="mysql" driver="mysql5" name="MySQL - posnubeclick" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="localhost" port="3306" server="" database="posnubeclick" url="jdbc:mysql://localhost:3306/posnubeclick" user="nubeclick" password="HREEJUJPTRUOcuc=" home="C:\Program Files\MySQL\MySQL Server 5.7" type="dev">
+			<network-handler type="CONFIG" id="mysql_ssl" enabled="false" save-password="false">
+				<property name="ssl.public.key.retrieve" value="false"/>
+				<property name="ssl.verify.server" value="true"/>
+				<property name="ssl.require" value="false"/>
+			</network-handler>
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="false">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="false">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+		</connection>
+	</data-source>
+	<filters/>
+</data-sources>

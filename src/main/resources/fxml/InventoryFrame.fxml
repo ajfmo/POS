@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="850.0"
+	stylesheets="@../styles/styles.css" AnchorPane.rightAnchor="0.0"
+	AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.111"
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nubeclick.pos.view.InventoryView">
+	<children>
+		<HBox alignment="CENTER" layoutX="25.0" layoutY="50.0" prefWidth="800.0"
+			spacing="25.0">
+			<children>
+				<VBox spacing="20.0">
+					<children>
+						<JFXTextField fx:id="txtCode" labelFloat="true"
+							prefWidth="300.0" promptText="Codigo del Producto" />
+						<JFXTextField fx:id="txtName" labelFloat="true"
+							prefWidth="300.0" promptText="Nombre" />
+						<JFXTextField fx:id="txtDescription" labelFloat="true"
+							prefWidth="300.0" promptText="Descripcion" />
+					</children>
+				</VBox>
+				<VBox spacing="20.0">
+					<children>
+						<JFXTextField fx:id="txtCost" labelFloat="true"
+							prefWidth="200.0" promptText="Costo" />
+						<JFXTextField fx:id="txtUtility" labelFloat="true"
+							prefWidth="200.0" promptText="Utilidad" />
+					</children>
+				</VBox>
+				<VBox spacing="20.0">
+					<children>
+						<JFXTextField fx:id="txtPrice" labelFloat="true"
+							prefWidth="200.0" promptText="Precio" />
+						<JFXTextField fx:id="txtInventory" labelFloat="true"
+							prefWidth="200.0" promptText="Existencia" />
+						<HBox alignment="CENTER_RIGHT" spacing="20.0">
+							<children>
+								<JFXButton id="crud-save" buttonType="RAISED" text="Guardar"
+									textFill="WHITE" />
+								<JFXButton id="crud-cancel" fx:id="btnCancel"
+									buttonType="RAISED" text="Cancelar" textFill="WHITE" />
+							</children>
+						</HBox>
+					</children>
+				</VBox>
+			</children>
+		</HBox>
+		<JFXTreeTableView fx:id="tblInventory" layoutX="25.0"
+			prefHeight="490.0" prefWidth="800.0" AnchorPane.bottomAnchor="25.0">
+			<columns>
+				<TreeTableColumn fx:id="colCode" prefWidth="75.0"
+					text="Codigo" />
+				<TreeTableColumn fx:id="colName" minWidth="0.0"
+					prefWidth="200.0" text="Nombre" />
+				<TreeTableColumn fx:id="colDescription" minWidth="0.0"
+					prefWidth="175.0" text="Descripcion" />
+				<TreeTableColumn fx:id="colCost" prefWidth="90.0"
+					text="Costo" />
+				<TreeTableColumn fx:id="colUtility" prefWidth="85.0"
+					text="Utilidad" />
+				<TreeTableColumn fx:id="colPrice" prefWidth="90.0"
+					text="Precio" />
+				<TreeTableColumn fx:id="colStock" prefWidth="85.0"
+					text="Existencia" />
+			</columns>
+		</JFXTreeTableView>
+		<Label layoutX="25.0" layoutY="15.0" styleClass="frame-titles"
+			text="Inventario">
+			<font>
+				<Font size="20.0" />
+			</font>
+		</Label>
+	</children>
+</AnchorPane>

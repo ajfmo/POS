@@ -1,0 +1,334 @@
+* {
+	/*-fx-font-family: "Roboto";*/
+    -fx-primary: #1976D2;
+    -fx-light: #6ec6ff;
+    -fx-dark: #0069c0;
+    -fx-primarytext : #B2B2B2;
+    -fx-blue: #1976D2;
+    -fx-red: #FF0000;
+}
+
+.login-body {
+	-fx-background-color:   -fx-primary;
+}
+
+.login-textField {
+	-fx-text-fill: white;
+}
+
+.leftAnchor {
+	-fx-background-color:  #426cad;
+}
+
+ /*TabPane styling*/
+ 
+.tab {
+    -fx-background-color:  -fx-primary;
+}
+
+.tabPane {
+	-fx-background-color:  -fx-primary;
+} 
+
+.tab-header-background {
+	-fx-background-color: 	-fx-primary;
+}
+
+/***** Custom Textfields *****/
+
+.input .text-field {
+	-fx-prompt-text-fill: #0069c0;
+}
+
+/**** Custom Labels ****/
+
+.frame-titles {
+	-fx-text-fill: #949494;
+	-fx-font-style: italic;
+	-fx-font-size: 20.0;
+}
+
+
+/**** Custom buttons ****/
+
+#crud-save {
+	-fx-text-fill: white;
+	-fx-background-color:  #007bff;
+}
+
+#crud-update {
+	-fx-text-fill: #000000a6;
+	-fx-background-color: #FFEB3B;
+}
+
+#crud-delete {
+	-fx-text-fill: white;
+	-fx-background-color: #F44336;
+}
+
+#crud-cancel {
+	-fx-text-fill: white;
+	-fx-background-color: #5a6268;
+}
+
+#tx-inventory {
+	-fx-font-size: 16.0px;
+	-fx-background-color:  #1976d2;
+	-fx-text-fill: white;
+}
+
+#tx-sales {
+	-fx-font-size: 16.0px;
+	-fx-background-color:  #388e3c;
+	-fx-text-fill: white;
+}
+
+#tx-purchases {
+	-fx-font-size: 16.0px;
+	-fx-background-color:  #303f9f;
+	-fx-text-fill: white;
+}
+
+#tx-prints {
+	-fx-font-size: 16.0px;
+	-fx-background-color:  #e64a19;
+	-fx-text-fill: white;
+}
+
+
+/*******************************************************************************
+*                                                                              *
+* JFX Textfield                                                                *
+*                                                                              *
+*******************************************************************************/
+
+.jfx-text-field, .jfx-password-field, .jfx-text-area {
+    /*
+    -fx-background-color: transparent;
+    -fx-font-weight: BOLD;-fx-alignment:
+    -fx-prompt-text-fill: #808080;
+    -fx-alignment: top-left;
+    -fx-max-width: 300.0;
+    -fx-pref-width: 300.0;
+    -jfx-unfocus-color: #4d4d4d;
+    */
+    -jfx-focus-color: -fx-primary;
+    
+}
+
+.jfx-text-area .viewport {
+    -fx-background-color: #F4F4F4;
+}
+
+
+/*******************************************************************************
+*                                                                              *
+* Tree Table View                                                              *
+*                                                                              *
+*******************************************************************************/
+
+.tree-table-view {
+    -fx-tree-table-color: rgba(82.0, 100.0, 174.0, 0.4);
+    -fx-tree-table-rippler-color: rgba(82.0, 100.0, 174.0, 0.6);
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected {
+    -fx-background-color: -fx-tree-table-color;
+    -fx-table-cell-border-color: -fx-tree-table-color;
+    -fx-text-fill: BLACK;
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected .tree-table-cell {
+    -fx-text-fill: BLACK;
+}
+
+.tree-table-view .jfx-rippler {
+    -jfx-rippler-fill: -fx-tree-table-rippler-color;
+}
+
+.tree-table-view .column-header,
+.tree-table-view .column-header-background,
+.tree-table-view .column-header-background .filler {
+    -fx-background-color: TRANSPARENT;
+}
+
+.tree-table-view .column-header {
+    -fx-border-width: 0.0 1.0 0.0 1.0;
+    -fx-border-color: #F3F3F3;
+}
+
+.tree-table-view .column-header .label {
+    -fx-text-fill: #949494;
+    -fx-padding: 16.0 0.0 16.0 0.0;
+}
+
+.tree-table-view .column-header .arrow, .tree-table-view .column-header .sort-order-dot {
+    -fx-background-color: #949494;
+}
+
+.tree-table-view .column-header:last-visible {
+    -fx-border-width: 0.0 2.0 0.0 1.0;
+}
+
+.tree-table-view .column-header-background {
+    -fx-border-width: 0.0 0.0 1.0 0.0;
+    -fx-border-color: #F3F3F3;
+}
+
+.tree-table-view .tree-table-cell {
+    -fx-border-width: 0.0 0.0 0.0 0.0;
+    -fx-padding: 16.0 0.0 16.0 0.0;
+    -fx-alignment: top-center;
+}
+
+.tree-table-view .column-overlay {
+    -fx-background-color: -fx-tree-table-color;
+}
+
+.tree-table-view .column-resize-line, .tree-table-view .column-drag-header {
+    -fx-background-color: -fx-tree-table-rippler-color;
+}
+
+.tree-table-view:focused {
+    -fx-background-color: -fx-tree-table-color, -fx-box-border, -fx-control-inner-background;
+    -fx-background-insets: -1.4, 0.0, 1.0;
+    -fx-background-radius: 1.4, 0.0, 0.0;
+    /*....*/
+    -fx-padding: 1.0; /* 0.083333em; */
+}
+
+.tree-table-row-cell > .tree-disclosure-node > .arrow {
+    -fx-background-color: -fx-text-fill;
+    -fx-padding: 0.333333em 0.229em 0.333333em 0.229em; /* 4 */
+    -fx-shape: "M 0 -3.5 L 4 0 L 0 3.5 z";
+}
+
+.tree-table-row-cell .jfx-text-field {
+    -fx-focus-color: rgba(82.0, 100.0, 174.0);
+}
+
+.tree-table-row-cell .jfx-text-field:error {
+    -jfx-focus-color: #D34336;
+    -jfx-unfocus-color: #D34336;
+}
+
+.tree-table-row-cell .jfx-text-field .error-label {
+    -fx-text-fill: #D34336;
+    -fx-font-size: 0.75em;
+}
+
+.tree-table-row-cell .jfx-text-field .error-icon {
+    -fx-fill: #D34336;
+    -fx-font-size: 1.0em;
+}
+
+.tree-table-row-cell:grouped {
+    -fx-background-color: rgb(230.0, 230.0, 230.0);
+}
+
+.tree-table-view .menu-item:focused {
+    -fx-background-color: -fx-tree-table-color;
+
+}
+
+.tree-table-view .menu-item .label {
+    -fx-padding: 5.0 0.0 5.0 0.0;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * JFX Radio Button                                                            *
+ *                                                                             *
+ ******************************************************************************/
+
+.jfx-radio-button .radio {
+	-jfx-selected-color: #1976D2;
+    -fx-stroke-width: 2.0px;
+    -fx-fill: transparent;
+}
+
+.jfx-radio-button .dot {
+    -fx-fill: #0F9D58;
+}
+
+.custom-jfx-radio-button {
+    -fx-font-size: 16.0px;
+}
+
+.custom-jfx-radio-button .radio {
+    -fx-stroke-width: 2.0px;
+    -fx-fill: transparent;
+}
+
+.custom-jfx-radio-button-blue {
+    -fx-text-fill: #5264AE;
+    -jfx-selected-color: -fx-primary;
+    -jfx-unselected-color: #212121;
+}
+
+.custom-jfx-radio-button-red {
+    -fx-text-fill: #f44336;
+    -jfx-selected-color: #f44336;
+    -jfx-unselected-color: #b71c1c;
+}
+
+.custom-jfx-radio-button-green {
+    -fx-text-fill: #4caf50;
+    -jfx-selected-color: #4caf50;
+    -jfx-unselected-color: #1b5e20;
+}
+
+
+
+/*******************************************************************************
+*                                                                              *
+* JFX Combo Box                                                                *
+*                                                                              *
+*******************************************************************************/
+
+/*
+.combo-box {
+	-fx-text-fill: #0069c0;
+	-fx-focus-color: #0069c0;
+}
+
+.combo-box-popup .list-view .jfx-list-cell .label,
+.combo-box-popup .list-view .jfx-list-cell:filled:hover .label {
+    -fx-text-fill: BLACK;
+}
+
+.combo-box-popup .list-view .jfx-list-cell .custom-jfx-list-view-icon,
+.combo-box-popup .list-view .jfx-list-cell:filled:hover .custom-jfx-list-view-icon,
+.combo-box-popup .list-view .jfx-list-cell:selected .custom-jfx-list-view-icon {
+    -fx-fill: #0069c0;
+}
+
+.combo-box-popup .list-view .jfx-list-cell:odd:selected > .jfx-rippler > StackPane,
+.combo-box-popup .list-view .jfx-list-cell:even:selected > .jfx-rippler > StackPane {
+    -fx-background-color: rgba(0.0, 0.0, 255.0, 0.2);
+}
+
+.combo-box-popup .list-view .jfx-list-cell {
+    -fx-background-insets: 0.0;
+}
+
+.combo-box-popup .list-view .jfx-list-cell:odd,
+.combo-box-popup .list-view .jfx-list-cell:even {
+    -fx-background-color: WHITE;
+}
+
+.combo-box-popup .list-view .jfx-list-cell .jfx-rippler {
+    -jfx-rippler-fill: #0069c0;
+}
+*/
+
+/**** Custom Panes ****/
+
+.pane-factura {
+	-fx-background-color: #0069c0;
+}
+
+.pane-print-filters {
+	-fx-background-color: #E2E2E2;
+}
