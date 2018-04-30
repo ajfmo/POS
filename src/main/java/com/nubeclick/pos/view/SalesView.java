@@ -3,12 +3,11 @@ package com.nubeclick.pos.view;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import org.controlsfx.control.textfield.TextFields;
-
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXTreeTableView;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
