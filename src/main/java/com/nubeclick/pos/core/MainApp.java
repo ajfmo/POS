@@ -3,10 +3,9 @@ package com.nubeclick.pos.core;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,8 +14,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 @SpringBootApplication(scanBasePackages = { "com.nubeclick.pos" })
-// @EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class,
-// HibernateJpaAutoConfiguration.class })
+@EnableJpaRepositories("com.nubeclick.pos.repository")
+@EntityScan("com.nubeclick.pos.dto")
 public class MainApp extends Application {
 
 	private static final Logger log = LoggerFactory.getLogger(MainApp.class);
@@ -24,7 +23,7 @@ public class MainApp extends Application {
 	public static void main(String[] args) throws Exception {
 
 		SpringApplication.run(MainApp.class, args);
-		// launch(args);
+		launch(args);
 	}
 
 	@Override

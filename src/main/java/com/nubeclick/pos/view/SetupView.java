@@ -153,20 +153,6 @@ public class SetupView implements Initializable {
 		// Get the selectec tab
 		System.out.println(setupTab.getSelectionModel().getSelectedItem().getText());
 
-		// btnSave.setOnAction(e -> {
-		// // Button was clicked, do something...
-		// msg = new Alert(AlertType.CONFIRMATION);
-		// msg.setTitle("Guardar Cambios");
-		// msg.setHeaderText("Atencion");
-		// msg.setContentText("Desea guardar los cambios realizados?");
-		// Optional<ButtonType> result = msg.showAndWait();
-		// if (result.get() == ButtonType.OK) {
-		// txtEmployeeID.setText(null);
-		// } else {
-		// // ... user chose CANCEL or closed the dialog
-		// }
-		// });
-
 		setupTab.setOnMouseClicked(e -> {
 			tab = setupTab.getSelectionModel().getSelectedItem().getText();
 			System.out.println(setupTab.getSelectionModel().getSelectedItem().getText());

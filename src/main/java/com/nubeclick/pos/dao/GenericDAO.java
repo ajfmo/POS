@@ -16,7 +16,4 @@ public interface GenericDAO<T, ID extends Serializable> {
 
 	public List<T> query(String hsql, Map<String, Object> params) throws DAOException;
 
-	// public T findById(ID id) throws DAOException;
-	// void delete(T object) throws DAOException;
-	// List<T> findAll(Class<T> entity) throws DAOException;
 }
