@@ -20,16 +20,13 @@ public class RoleTests {
 	@Autowired
 	private RoleRepository roleRepo;
 
-	private Role role;
-
 	@Test
 	public void contextLoads() {
 	}
 
 	@Test
 	public void saveRole() {
-		role = new Role("Dios", 99);
-		roleRepo.save(role);
+		roleRepo.save(new Role("Dios", 99));
 		Assert.assertNotNull(roleRepo.findByRoleDescription("Dios"));
 	}
 

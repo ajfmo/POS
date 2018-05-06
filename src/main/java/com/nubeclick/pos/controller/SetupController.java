@@ -15,12 +15,8 @@ public class SetupController<ID extends Serializable> {
 	@Autowired
 	private RoleRepository roleRepository;
 
-	private Role role = new Role();
-
 	@Transactional
 	public void saveRole(String roleDescription, int roleLevel) {
-		role.setRoleDescription(roleDescription);
-		role.setRoleLevel(roleLevel);
-		roleRepository.save(role);
+		roleRepository.save(new Role(roleDescription, roleLevel));
 	}
 }
