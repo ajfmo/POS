@@ -1,6 +1,3 @@
-[![Pipelines CI](https://img.shields.io/bitbucket/pipelines/nubeclick/posnubeclick/develop.svg)](https://bitbucket.org/nubeclick/posnubeclick/addon/pipelines/home#!/)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1d504cf174df424c9e6f645bfce890cf)](https://www.codacy.com?utm_source=git@bitbucket.org&amp;utm_medium=referral&amp;utm_content=nubeclick/posnubeclick&amp;utm_campaign=Badge_Grade)
-
 # For developers who want to contribute please refer to the instructions ![here](/Contributing.md)
 
 # ACME-POS
