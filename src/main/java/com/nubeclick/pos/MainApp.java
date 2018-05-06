@@ -1,11 +1,9 @@
-package com.nubeclick.pos.core;
+package com.nubeclick.pos;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,9 +11,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-@SpringBootApplication(scanBasePackages = { "com.nubeclick.pos" })
-@EnableJpaRepositories("com.nubeclick.pos.repository")
-@EntityScan("com.nubeclick.pos.dto")
+@SpringBootApplication
+//(scanBasePackages = { "com.nubeclick.pos" })
+//@EnableJpaRepositories("com.nubeclick.pos.repository")
+//@EntityScan("com.nubeclick.pos.dto")
 public class MainApp extends Application {
 
 	private static final Logger log = LoggerFactory.getLogger(MainApp.class);
