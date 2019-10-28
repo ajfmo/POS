@@ -5,7 +5,7 @@
 	<artifactId>pos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>POSNubeClick</name>
-	<description>Sistema de punto de venta (Point Of Sale).</description>
+	<description> Sistema de punto de venta (Point Of Sale).</description>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
